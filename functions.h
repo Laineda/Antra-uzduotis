@@ -16,15 +16,6 @@
 #include <random>
 #include <list>
 using namespace std;
-struct studentas
-{
-    string vardas;
-    string pavarde;
-    vector<int> nd;
-    int egzaminas;
-    float galutinis;
-};
-
 
 double vidurkis(vector<int> nd);
 
@@ -45,12 +36,6 @@ public:
         this->egzaminas = egzaminas;
         this->galutinis = vidurkis(nd) * 0.4 + 0.6 * egzaminas;
     }
-
-    // 1. Destructor
-    ~StudentasClass()
-    {
-
-    }
     float getRezultatas() const
     {
         return galutinis;
@@ -65,27 +50,6 @@ public:
         cout << vardas << " " << pavarde << " " << nd[0] << " " << nd[1] << " " << nd[2] << " " << nd[3] << " " << nd[4] << " | " << egzaminas << " " << galutinis << endl;
     }
 
-    // 2.copy constructor
-    StudentasClass(const StudentasClass& kitas)
-    {
-        this->vardas = kitas.vardas;
-        this->pavarde = kitas.pavarde;
-        this->nd = kitas.nd;
-        this->egzaminas = kitas.egzaminas;
-        this->galutinis = kitas.galutinis;
-    }
-
-
-    // 3.copy assignment constructor
-    StudentasClass& operator =(const StudentasClass& kitas)
-    {
-        this->vardas = kitas.vardas;
-        this->pavarde = kitas.pavarde;
-        this->nd = kitas.nd;
-        this->egzaminas = kitas.egzaminas;
-        this->galutinis = kitas.galutinis;
-        return *this;
-    }
 };
 
 
