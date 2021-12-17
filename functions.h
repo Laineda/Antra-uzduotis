@@ -46,26 +46,7 @@ public:
         this->galutinis = vidurkis(nd) * 0.4 + 0.6 * egzaminas;
     }
 
-    // 1.copy constructor
-    StudentasClass(const StudentasClass& kitas)
-    {
-        this->vardas = kitas.vardas;
-        this->pavarde = kitas.pavarde;
-        this->nd = kitas.nd;
-        this->egzaminas = kitas.egzaminas;
-        this->galutinis = kitas.galutinis;
-    }
-    // 2.copy assignment constructor
-    StudentasClass& operator =(const StudentasClass& kitas)
-    {
-        this->vardas = kitas.vardas;
-        this->pavarde = kitas.pavarde;
-        this->nd = kitas.nd;
-        this->egzaminas = kitas.egzaminas;
-        this->galutinis = kitas.galutinis;
-        return *this;
-    }
-    // 3. Destructor
+    // 1. Destructor
     ~StudentasClass()
     {
 
@@ -82,6 +63,26 @@ public:
     void spausdinti_pilnai()
     {
         cout << vardas << " " << pavarde << " " << nd[0] << " " << nd[1] << " " << nd[2] << " " << nd[3] << " " << nd[4] << " | " << egzaminas << " " << galutinis << endl;
+    }
+    
+    // 2.copy constructor
+    StudentasClass(const StudentasClass& kitas)
+    {
+        this->vardas = kitas.vardas;
+        this->pavarde = kitas.pavarde;
+        this->nd = kitas.nd;
+        this->egzaminas = kitas.egzaminas;
+        this->galutinis = kitas.galutinis;
+    }
+    // 3.copy assignment operator
+    StudentasClass& operator =(const StudentasClass& kitas)
+    {
+        this->vardas = kitas.vardas;
+        this->pavarde = kitas.pavarde;
+        this->nd = kitas.nd;
+        this->egzaminas = kitas.egzaminas;
+        this->galutinis = kitas.galutinis;
+        return *this;
     }
 
 };
