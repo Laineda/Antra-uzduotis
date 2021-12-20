@@ -97,4 +97,3 @@ void dalijimas_struct(list<studentas> studentai);
 void dalijimas_class(list<Studentas> studentai);
 
 void testuoti(int kiek);
-

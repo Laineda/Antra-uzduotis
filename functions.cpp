@@ -2,8 +2,12 @@
 
 using namespace std;
 
+
 double vidurkis(vector<int> nd)
 {
+    //vidurkio skaiciavimo funkcija,
+    //
+    //veikia su sveikais skaiciais vektoriais 
     int suma = 0;
     for (int i : nd)
     {
@@ -16,6 +20,11 @@ double vidurkis(vector<int> nd)
 
 list<studentas> stud_generavimas(int kiek, list<Studentas>& studentaiClass)
 {
+    //studentu generavimo funkcija -sugeneruoja studentu vardus, pavardes, nd, egzamino pazymius
+    //
+    //suskaiciuoja galutini bala
+    //
+    //priima sveikus skaicius ir list tipo sarasa su reiksmemis studClass 
     list<studentas> studentai;
     for (int i = 0; i < kiek; i++)
     {
@@ -50,6 +59,9 @@ list<studentas> stud_generavimas(int kiek, list<Studentas>& studentaiClass)
 
 void dalijimas_struct(list<studentas> studentai)
 {
+    //dalija studentus i vargsiukus ir kietiakius, apskaiciuoja laika
+    //
+    //priima sarasa studentu, kur reiksmes struct tipo 
     auto start_time = std::chrono::high_resolution_clock::now();
     int dydis = studentai.size();
     vector<studentas> vargšiukai;
@@ -74,6 +86,9 @@ void dalijimas_struct(list<studentas> studentai)
 
 void dalijimas_class(list<Studentas> studentai)
 {
+    //dalija studentus i vargsiukus ir kietiakius, apskaiciuoja laika
+    //
+    //priima sarasa studentu, kur reiksmes class tipo
     auto start_time = std::chrono::high_resolution_clock::now();
 
     int dydis = studentai.size();
@@ -99,6 +114,11 @@ void dalijimas_class(list<Studentas> studentai)
 
 void testuoti(int kiek)
 {
+    //Nieko negrazinanti testavimo funkcija
+    //
+    //Apjungia duomenu generavima ir laiko tyrimus
+    //
+    //Priima sveika skaiciu kiek, kuris nurodo, su kiek studentu bus testuojama
     list<studentas> studentai;
     list<Studentas> studentaiClass;
     studentai = stud_generavimas(kiek, studentaiClass);
