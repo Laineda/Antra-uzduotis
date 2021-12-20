@@ -16,3 +16,8 @@
 
 # v2.0
 * Sukurta dokumentacija panaudojant Doxygen;
+
+# Naudojimosi instrukcija
+* Parsisiųsti v1.0.cpp, Funkcijos.cpp ir Funkcijos.h failus;
+* Juos atidaryti naudojant tinkamas programas (Visual Studio 2019 (mano naudota), Code::Block ir t.t.);
+* Paleisti programą;
